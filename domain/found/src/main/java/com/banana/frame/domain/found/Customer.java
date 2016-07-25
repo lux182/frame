@@ -1,4 +1,4 @@
-package com.banana.frame.domain.found
+package com.banana.frame.domain.found;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
