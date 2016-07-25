@@ -10,6 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>found-domainservice-found</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.banana.frame</groupId>
+            <artifactId>found-domain-found</artifactId>
+        </dependency>
 
+    </dependencies>
 
 </project>
