@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.banana.frame.domain.enums;
+package com.banana.frame.domain.found.enums;
 
 import org.apache.commons.lang.StringUtils;
 
