@@ -6,9 +6,10 @@ package com.banana.frame.domain.enums;
 import org.apache.commons.lang.StringUtils;
 
 /**
- * <p>凭证入口类型</p>
- * @author Zhuxiangyu
- * @version $Id: SenderType.java, v 0.1 2013-11-25 下午3:26:28 zhuxiangyu Exp $
+ * <p></p>
+ *
+ * @author Louis
+ * @version v 0.1 2016/7/26
  */
 public enum AccessType {
     WEB("web","WEB"),
