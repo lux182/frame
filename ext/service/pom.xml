@@ -11,5 +11,22 @@
 
     <artifactId>found-ext-service</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.banana.frame</groupId>
+            <artifactId>found-domain-found</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.banana.frame</groupId>
+            <artifactId>found-domainservice-found</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.banana.frame</groupId>
+            <artifactId>found-service-facade</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 </project>
