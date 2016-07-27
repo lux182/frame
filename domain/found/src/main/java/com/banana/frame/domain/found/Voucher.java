@@ -15,7 +15,6 @@ import javax.persistence.Entity;
  * @author Louis
  * @version $Id:com.banana.frame.domain.found.enums, v 0.1 2016/7/26 15:08 liuxuesi Exp $
  */
-@Entity
     public abstract class Voucher extends BaseDomain {
 
     /**

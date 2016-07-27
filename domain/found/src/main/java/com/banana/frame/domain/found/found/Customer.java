@@ -9,13 +9,12 @@ import javax.persistence.Id;
 public class Customer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
     private String firstName;
     private String lastName;
 
-    protected Customer() {
-    }
+    protected Customer() {}
 
     public Customer(String firstName, String lastName) {
         this.firstName = firstName;
@@ -30,3 +29,4 @@ public class Customer {
     }
 
 }
+
