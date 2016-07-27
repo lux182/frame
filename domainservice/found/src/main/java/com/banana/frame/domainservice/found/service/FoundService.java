@@ -1,31 +1,32 @@
-package com.banana.frame.domainservice.found.impl;
+package com.banana.frame.domainservice.found.service;
 
 import com.banana.frame.domain.found.found.Customer;
-import com.banana.frame.domainservice.found.FoundService;
 import com.banana.frame.domainservice.found.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Service;
 
 /**
  * <p></p>
  *
  * @author Louis
- * @version $Id:com.banana.frame.domainservice.found.impl, v 0.1 2016/7/26 17:24 liuxuesi Exp $
+ * @version $Id:com.banana.frame.domainservice.found.service, v 0.1 2016/7/26 17:24 liuxuesi Exp $
  */
-public class FoundServiceImpl implements FoundService {
-    private static final Logger log = LoggerFactory.getLogger(FoundServiceImpl.class);
+@Service
+public class FoundService {
+    private static final Logger log = LoggerFactory.getLogger(FoundService.class);
 
     @Autowired
     private CustomerRepository repository;
 
-    @Override
     public String query() {
 
         return repository.findOne(1L).toString();
     }
+
     @Bean
     public CommandLineRunner demo(CustomerRepository repository) {
         return (args) -> {
