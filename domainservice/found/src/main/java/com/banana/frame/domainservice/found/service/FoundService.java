@@ -20,11 +20,11 @@ public class FoundService {
     private static final Logger log = LoggerFactory.getLogger(FoundService.class);
 
     @Autowired
-    private CustomerRepository repository;
+    private CustomerRepository customerRepository;
 
     public String query() {
 
-        return repository.findOne(1L).toString();
+        return (customerRepository.findOne(1L)==null?"":customerRepository.findOne(1L).toString());
     }
 
     @Bean
