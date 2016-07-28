@@ -1,4 +1,4 @@
-package com.banana.frame.domain.found.found.user;
+package com.banana.frame.core.dal.entity.user;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;

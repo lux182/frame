@@ -7,8 +7,6 @@ package com.banana.frame.domain.found;
 import com.banana.frame.domain.found.enums.AccessType;
 import com.banana.frame.domain.found.enums.VoucherType;
 
-import javax.persistence.Entity;
-
 /**
  * <p>凭证</p>
  *

@@ -1,5 +1,6 @@
 package com.banana.frame.web.config;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -15,12 +16,14 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EntityScan(basePackages = {"com.banana.frame.domain.found.found"})
+@EntityScan(basePackages = {"com.banana.frame.core.dal.entity"})
 @ComponentScan(basePackages = {"com.banana.frame"})
 @EnableJpaRepositories("com.banana.frame")
+@MapperScan("com.banana.frame.core.dal.mapper")
 public class Application extends SpringBootServletInitializer {
 
     private static final Logger log = LoggerFactory.getLogger(Application.class);
+
     public static void main(String[] args) throws Throwable {
         SpringApplication.run(Application.class, args);
     }

@@ -1,6 +1,6 @@
 package com.banana.frame.domainservice.found.service;
 
-import com.banana.frame.domain.found.found.Customer;
+import com.banana.frame.core.dal.entity.user.Customer;
 import com.banana.frame.domainservice.found.repository.CustomerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +24,7 @@ public class FoundService {
 
     public String query() {
 
-        return (customerRepository.findOne(1L)==null?"":customerRepository.findOne(1L).toString());
+        return (customerRepository.findOne(1L) == null ? "" : customerRepository.findOne(1L).toString());
     }
 
     @Bean

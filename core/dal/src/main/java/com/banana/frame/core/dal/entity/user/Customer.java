@@ -1,4 +1,4 @@
-package com.banana.frame.domain.found.found;
+package com.banana.frame.core.dal.entity.user;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
