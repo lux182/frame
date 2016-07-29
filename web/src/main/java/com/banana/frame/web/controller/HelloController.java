@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 /**
  * <p></p>
  *
@@ -29,4 +31,10 @@ public class HelloController {
         return "test";
     }
 
+    @RequestMapping("/helloagian")
+    public String helloworldagain(Model model) {
+        List list = foundService.queryUserList();
+        model.addAttribute("test", list);
+        return "test";
+    }
 }
