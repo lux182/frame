@@ -19,7 +19,7 @@
     <!--</select>-->
 
     <select id="findCustomerList" resultMap="UserResultMap">
-        select id, firstName, lastName from customer
+        select id, first_name, last_name from customer
     </select>
 
     <!--<insert id="insertUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">-->
