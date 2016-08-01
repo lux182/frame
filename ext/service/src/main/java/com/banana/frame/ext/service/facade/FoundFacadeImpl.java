@@ -8,6 +8,7 @@ import com.banana.frame.service.facade.response.AccessQueryResponse;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 
 import javax.annotation.Resource;
@@ -19,7 +20,10 @@ import javax.jws.WebService;
  * @author Louis
  * @version v 0.1 2016/7/2614:39
  */
-@WebService(endpointInterface = "com.banana.frame.service.facade.FoundFacade", targetNamespace = "http://found.ws.frame.banana.com")
+
+//@WebService(serviceName = "foundFacade",endpointInterface = "com.banana.frame.service.facade.FoundFacade", targetNamespace = "http://found.ws.frame.banana.com")
+@Component("foundFacade")
+@WebService(serviceName = "foundFacade", endpointInterface = "com.banana.frame.service.facade.FoundFacade")
 public class FoundFacadeImpl implements FoundFacade {
     private static final Logger logger = LoggerFactory
             .getLogger(FoundFacadeImpl.class);
