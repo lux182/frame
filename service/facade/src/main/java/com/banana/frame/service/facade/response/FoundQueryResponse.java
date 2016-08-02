@@ -12,7 +12,7 @@ import org.apache.commons.lang.builder.ToStringStyle;
  * @author Louis
  * @version v 0.1 2016/7/26
  */
-public class AccessQueryResponse extends BaseResponse {
+public class FoundQueryResponse extends BaseResponse {
 
     /**
      *

@@ -44,6 +44,12 @@
             <artifactId>validation-api</artifactId>
             <version>1.1.0.Final</version>
         </dependency>
+        <!--test-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -96,6 +102,15 @@
                     <downloadSources>true</downloadSources>
                     <downloadJavadocs>false</downloadJavadocs>
                     <wtpversion>1.5</wtpversion>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.12.4</version>
+                <configuration>
+                    <forkMode>once</forkMode>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
                 </configuration>
             </plugin>
         </plugins>

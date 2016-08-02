@@ -11,5 +11,29 @@
 
     <artifactId>found-service-facade</artifactId>
 
+    <properties>
+        <cxf.version>3.1.0</cxf.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+            <version>${cxf.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-transports-http</artifactId>
+            <version>${cxf.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-management</artifactId>
+            <version>${cxf.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
 
 </project>

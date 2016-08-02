@@ -4,7 +4,7 @@ import com.banana.frame.domainservice.found.domain.ReturnCode;
 import com.banana.frame.domainservice.found.service.FoundService;
 import com.banana.frame.service.facade.FoundFacade;
 import com.banana.frame.service.facade.request.FoundRequest;
-import com.banana.frame.service.facade.response.AccessQueryResponse;
+import com.banana.frame.service.facade.response.FoundQueryResponse;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,9 +21,10 @@ import javax.jws.WebService;
  * @version v 0.1 2016/7/2614:39
  */
 
-//@WebService(serviceName = "foundFacade",endpointInterface = "com.banana.frame.service.facade.FoundFacade", targetNamespace = "http://found.ws.frame.banana.com")
+
 @Component("foundFacade")
-@WebService(serviceName = "foundFacade", endpointInterface = "com.banana.frame.service.facade.FoundFacade")
+@WebService(serviceName = "foundFacade", endpointInterface = "com.banana.frame.service.facade.FoundFacade", targetNamespace = "http://found.ws.frame.banana.com")
+//@WebService(serviceName = "foundFacade", endpointInterface = "com.banana.frame.service.facade.FoundFacade")
 public class FoundFacadeImpl implements FoundFacade {
     private static final Logger logger = LoggerFactory
             .getLogger(FoundFacadeImpl.class);
@@ -31,12 +32,12 @@ public class FoundFacadeImpl implements FoundFacade {
     private FoundService foundService;
 
     @Override
-    public AccessQueryResponse query(FoundRequest foundRequest) {
+    public FoundQueryResponse query(FoundRequest foundRequest) {
         logger.info("开始查询数据：request=" + foundRequest);
-        AccessQueryResponse response = new AccessQueryResponse();
+        FoundQueryResponse response = new FoundQueryResponse();
         try {
-            Assert.notNull(foundRequest, "查询请求不能为空");
-            Assert.isTrue(StringUtils.isNotEmpty(foundRequest.getFoundType()), "查询类型不能为空");
+//            Assert.notNull(foundRequest, "查询请求不能为空");
+//            Assert.isTrue(StringUtils.isNotEmpty(foundRequest.getFoundType()), "查询类型不能为空");
             String string = foundService.query();
             response.setReturnCode(ReturnCode.SUCCESS.getCode());
             response.setReturnMessage(ReturnCode.SUCCESS.getName());
@@ -52,8 +53,8 @@ public class FoundFacadeImpl implements FoundFacade {
         return response;
     }
 
-    private AccessQueryResponse buildFailedAccessQueryResponse(ReturnCode returnCode, String message) {
-        AccessQueryResponse response = new AccessQueryResponse();
+    private FoundQueryResponse buildFailedAccessQueryResponse(ReturnCode returnCode, String message) {
+        FoundQueryResponse response = new FoundQueryResponse();
         response.setReturnCode(returnCode.getCode());
         response.setReturnMessage(returnCode.getName() + "," + message);
         return response;
